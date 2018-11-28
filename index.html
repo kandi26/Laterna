@@ -1,0 +1,334 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Laterna Media - Kommunikation und Text</title>
+    <meta name="keywords" content="PR, Kommunikation, Text, Rhein-Main, Webdesign" />
+    <meta name="description" content="Kommunikationslösungen - zielgruppenspezifisch, effektiv und multimedial" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
+    <link rel="stylesheet" type="text/css" href="project-files/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="project-files/css/style.css">
+    <link rel="stylesheet" type="text/css" href="project-files/fonts/icomoon.css">
+    <link rel="icon" type="image/x-icon" href="project-files/img/favicon.ico" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="project-files/js/responsive_menu/responsive_menu.js"></script>
+
+
+    <script type="text/javascript" src="project-files/js/jquery.easing.1.3.js"></script>
+    <script src="project-files/js/modernizr.js"></script>
+    <script src="project-files/js/smooth-scrolling.js"></script>
+    <script src="project-files/js/fade_background_images.js"></script>
+    <script src="project-files/js/resize_images.js"></script>
+    <script src="project-files/js/scroll_top.js"></script>
+    <script src="project-files/js/responsive_pictures.js"></script>
+
+    <!-- Fancybox -->
+    <script type="text/javascript" src="project-files/js/fancybox/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="project-files/js/fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        /*
+         *  Simple image gallery. Uses default settings
+         */
+
+        $('.fancybox').fancybox();
+
+        /*
+         *  Different effects
+         */
+
+        // Change title type, overlay closing speed
+        $(".fancybox-effects-a").fancybox({
+          helpers: {
+            title : {
+              type : 'outside'
+            },
+            overlay : {
+              speedOut : 0
+            }
+          }
+        });
+
+        // Disable opening and closing animations, change title type
+        $(".fancybox-effects-b").fancybox({
+          openEffect  : 'none',
+          closeEffect : 'none',
+
+          helpers : {
+            title : {
+              type : 'over'
+            }
+          }
+        });
+
+        // Set custom style, close if clicked, change title type and overlay color
+        $(".fancybox-effects-c").fancybox({
+          wrapCSS    : 'fancybox-custom',
+          closeClick : true,
+
+          openEffect : 'none',
+
+          helpers : {
+            title : {
+              type : 'inside'
+            },
+            overlay : {
+              css : {
+                'background' : 'rgba(238,238,238,0.85)'
+              }
+            }
+          }
+        });
+
+        // Remove padding, set opening and closing animations, close if clicked and disable overlay
+        $(".fancybox-effects-d").fancybox({
+          padding: 0,
+
+          openEffect : 'elastic',
+          openSpeed  : 150,
+
+          closeEffect : 'elastic',
+          closeSpeed  : 150,
+
+          closeClick : true,
+
+          helpers : {
+            overlay : null
+          }
+        });
+
+        /*
+         *  Button helper. Disable animations, hide close button, change title type and content
+         */
+
+        $('.fancybox-buttons').fancybox({
+          openEffect  : 'none',
+          closeEffect : 'none',
+
+          prevEffect : 'none',
+          nextEffect : 'none',
+
+          closeBtn  : false,
+
+          helpers : {
+            title : {
+              type : 'inside'
+            },
+            buttons : {}
+          },
+
+          afterLoad : function() {
+            this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+          }
+        });
+
+
+        /*
+         *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+         */
+
+        $('.fancybox-thumbs').fancybox({
+          prevEffect : 'none',
+          nextEffect : 'none',
+
+          closeBtn  : false,
+          arrows    : false,
+          nextClick : true,
+
+          helpers : {
+            thumbs : {
+              width  : 50,
+              height : 50
+            }
+          }
+        });
+
+        /*
+         *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+        */
+        $('.fancybox-media')
+          .attr('rel', 'media-gallery')
+          .fancybox({
+            openEffect : 'none',
+            closeEffect : 'none',
+            prevEffect : 'none',
+            nextEffect : 'none',
+
+            arrows : false,
+            helpers : {
+              media : {},
+              buttons : {}
+            }
+          });
+
+        /*
+         *  Open manually
+         */
+
+        $("#fancybox-manual-a").click(function() {
+          $.fancybox.open('1_b.jpg');
+        });
+
+        $("#fancybox-manual-b").click(function() {
+          $.fancybox.open({
+            href : 'iframe.html',
+            type : 'iframe',
+            padding : 5
+          });
+        });
+
+        $("#fancybox-manual-c").click(function() {
+          $.fancybox.open([
+            {
+              href : '1_b.jpg',
+              title : 'My title'
+            }, {
+              href : '2_b.jpg',
+              title : '2nd title'
+            }, {
+              href : '3_b.jpg'
+            }
+          ], {
+            helpers : {
+              thumbs : {
+                width: 75,
+                height: 50
+              }
+            }
+          });
+        });
+
+
+      });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Chat Button (Userlike) -->
+    <script type="text/javascript" src="//userlike-cdn-widgets.s3-eu-west-1.amazonaws.com/b934514d3a1e09882c89cddd3f8bfb20f1f716a97d6c9e90777ba9896310bc46.js"></script>
+
+
+    <a id="topsite"></a>
+
+    <!-- MAIN PICTURES -->
+
+    <!-- Picture -->
+    <div class="main_picture1 mainpicture">
+        <img class="picture"
+        data-portrait="project-files/img/backgrounds/mobil/Waves2.svg"
+        data-landscape="project-files/img/backgrounds/Waves2.svg"
+        alt="" title="" />
+
+        <!-- <video autoplay loop poster="project-files/img/backgrounds/bild01.jpg"
+        data-portrait="project-files/img/backgrounds/mobil/bild01.jpg"
+        data-landscape="project-files/img/backgrounds/prisma.webm"
+        class="bgvid"></video> -->
+    </div>
+
+
+    <div class="slider_container">
+
+
+        <!-- Box1 -->
+        <div class="slide line_bg" id="slide1" data-slide="1">
+
+           <div class="slide_inner">
+
+               <div class="start_container">
+
+
+                        <div class="contentbox_start">
+                           <div class="contentbox_headline"><h1><strong>Laterna Media</strong> <br>_kommunikation und text</h1></div>
+                            <p><strong>PR-Beratung & Marketing für Kunden aus den Bereichen Bildung und Wissenschaft sowie für Stiftungen - Multimedia-Kommunikation via Film, Foto, Social Media und Websites.</strong></p>
+            <p>
+                            Ich arbeite als freier PR-Berater mit zuverlässigen Partnern aus dem Bereich Foto, Film und Webdesign. In meinem Netzwerk vertraue ich auf mehrjährig Erfahrung und ausgewiesene Expertise meiner Partner aus den Bereichen  Mediengestaltung, Webdesign, Kamera, Filmschnitt, Suchmaschinenoptimierung (SEO) sowie Social Media. <br><br>Ihre PR-Arbeit für Stiftungen, Bildung und Forschung kosteneffizient aus einer Hand.
+                            </p>
+
+                       </div>
+
+
+                   <!-- Main-Navigation -->
+                   <div class="clear"></div>
+
+
+
+                </div>
+
+                <!-- Eventbox
+                <a target="_blank" href="http://www.phmi.uni-mainz.de">
+                  <div class="eventbox">
+                    <div class="eventbox_date">12.08.2015, Erfurt</div>
+                    <div class="eventbox_title">We search for excellent graduate students, who are looking for research experience abroad.</div>
+                    <p>&raquo; www.phmi.uni-mainz.de</p>
+                  </div>
+                </a>
+                -->
+                <div class="clear"></div>
+
+           </div>
+
+
+        </div>
+
+
+
+
+        <div class="container_slides">
+          <div class="dotted-line"></div>
+
+
+
+        <!-- Box10 -->
+        <div class="slide" id="slide10" data-slide="10">
+
+
+           <div class="slide_inner contact_holder">
+
+              <div class="container-fluid">
+
+                  <!-- ========== SCROLL TO TOP ========== -->
+                  <a href="#topsite" class="scrollicon" title="Seitenanfang"><span class="icon icon-arrow_top"></span></a>
+
+                  <div class="contact_left">
+                      <img alt="KA" title="KA" src="project-files/img/ka_personal.jpg" />
+
+                  </div>
+                  <div class="contact_right">
+
+                     <div class="contentbox_headline"><h2>_ get in touch</h2></div>
+                      <p>laterna media _kommunikation und text<br>
+                      Geschäftsführer: Dr. Kevin Anding<br>
+                      Gartenfeldstr. 7<br>
+                      65391 Lorch-Espenschied<br>
+                      Telefon: +49 170 1227951<br>
+                      E-Mail: <a href="mailto:info [ at ] laterna-media.de">info [ at ] laterna-media.de</a></p>
+                      <a style="border-bottom:dotted 1px #CCC; display:block; margin-bottom:10px; margin-top:-5px; padding-bottom:5px;" target="_blank" href="https://twitter.com/poechali"><img src="project-files/img/twitter_follow.png" alt=""></a>
+
+                      <p><a target="_blank" href="http://connectingscience.de/homepage-business-light/impressum/">Impressum</a> | <a target="_blank" href="http://connectingscience.de/homepage-business-light/datenschutzerklaerung/">Datenschutzerkl&auml;rung</a></p>
+                      <br />
+
+                  </div>
+                  <div class="clear"></div>
+                  <br />
+
+              </div>
+
+
+           </div>
+
+        </div>
+
+
+
+
+
+
+    </div>
+</body>
+</html>

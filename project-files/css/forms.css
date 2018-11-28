@@ -1,0 +1,54 @@
+/* ============================================
+================== FORMULARE ==================
+===============================================*/
+#form { margin: 30px 0px 0px 0px; padding:0;}
+.input_box {display:table; width:100%; margin-bottom: 20px; }
+label { color:#333; font-size:1.2em; float:left; width:30%; }
+input {float: left; display: block; width: 70%; font-size: 15px; line-height: 1.4; border: 1px solid #aaa; padding: 5px 10px; font-family: Verdana, Geneva, sans-serif;}
+textarea { display:block; width:70%; border: 1px solid #aaa; padding: 5px 10px; font-size: 15px; line-height: 1.4; font-family: Verdana, Geneva, sans-serif;}
+input:after { content:" "; clear:both;}
+input:focus, textarea:focus {outline: 1px solid #33c441;}
+
+input[type=submit]
+{
+	line-height: 1;
+	display: inline-block;
+	background: #716d65;
+	color: #fff;
+	font-size: 20px;
+	padding: 5px 8px;
+	text-shadow: none;
+	cursor: pointer;
+	border: none;
+	width: auto;
+	font-family: 'Oswald', sans-serif;
+	font-size:1.2em;
+	margin-left:30%;
+}
+
+input[type=submit]:hover { background:#33c441;}
+.required { color:#C00;}
+
+@media only screen and (max-width:1024px)
+{
+	label { float:none; width:100%; font-size:1.0em;}
+	input { float:none; width:100%; font-size:14px; margin-top: 5px !important;}
+	textarea { float:none; width:100%; margin-top: 5px !important;}
+	input[type=submit] {margin: 0;}
+}
+
+@media only screen and (max-width:1000px)
+{
+	label { font-size:1.2em; width:30%;}
+	input { font-size:14px; width:70%;}
+	textarea { float:none; width:70%;}
+	input[type=submit] {margin-left:30%;}
+}
+
+@media only screen and (max-width:760px)
+{
+	label { float:none; width:100%; font-size:1.0em;}
+	input { float:none; width:100%; font-size:14px; margin-top: 5px !important;}
+	textarea { float:none; width:100%; margin-top: 5px !important;}
+	input[type=submit] {margin: 0;}
+}
