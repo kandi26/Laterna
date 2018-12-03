@@ -46,9 +46,10 @@ html,body {font-family: 'Roboto', sans-serif; width:100%; height: 100% !importan
 
 /* ========== SLIDE ========== */
 
-#meinslide1{
+.meinslide1{
     height: 100%;
     width: 100%;
+    margin:0 autostart_container
     min-height: 100%; height:auto; padding-top:30px; border-bottom:solid 1px #FFF;
     background:rgba(0,0,0,0.7);
     background-image:url("../img/backgrounds/Waves2.svg");
@@ -581,6 +582,7 @@ ul.socialmedia_items li a:hover {left:0px;}
 		width:100%;
 		left:0px;
 		padding:30px;
+
 	}
 
 	.start_left {
