@@ -1,0 +1,81 @@
+/* ============================================
+================== GRID =======================
+===============================================*/
+body {margin: 0;}
+* {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after { clear:both; content:" "; display:table; }
+
+/* Container */
+.container {padding: 0 15px; margin: 0 auto; position:relative;}
+@media (min-width: 768px) {.container {width: 750px;}}
+@media (min-width: 992px) {.container {width: 970px;}}
+@media (min-width: 1200px) {.container {width: 970px;}}
+.container-fluid {padding: 0 15px; margin: 0 auto;}
+.row {margin: 0 -15px;}
+
+.mobile1, .tab1, .medium1, .large1, .mobile2, .tab2, .medium2, .large2, .mobile3, .tab3, .medium3, .large3, .mobile4, .tab4, .medium4, .large4, .mobile5, .tab5, .medium5, .large5, .mobile6, .tab6, .medium6, .large6, .mobile7, .tab7, .medium7, .large7, .mobile8, .tab8, .medium8, .large8, .mobile9, .tab9, .medium9, .large9, .mobile10, .tab10, .medium10, .large10, .mobile11, .tab11, .medium11, .large11, .mobile12, .tab12, .medium12, .large12
+{position: relative; min-height: 1px; padding: 0 15px;}
+
+.mobile1, .mobile2, .mobile3, .mobile4, .mobile5, .mobile6, .mobile7, .mobile8, .mobile9, .mobile10, .mobile11, .mobile12 {float: left;}
+
+.mobile12 {width: 100%;}
+.mobile11 {width: 91.66666667%;}
+.mobile10 {width: 83.33333333%;}
+.mobile9 {width: 75%;}
+.mobile8 {width: 66.66666667%;}
+.mobile7 {width: 58.33333333%;}
+.mobile6 {width: 50%;}
+.mobile5 {width: 41.66666667%;}
+.mobile4 {width: 33.33333333%;}
+.mobile3 {width: 25%;}
+.mobile2 {width: 16.66666667%;}
+.mobile1 {width: 8.33333333%;}
+
+@media (min-width: 768px) {
+	.tab1, .tab2, .tab3, .tab4, .tab5, .tab6, .tab7, .tab8, .tab9, .tab10, .tab11, .tab12
+	{float: left;}
+	.tab12 {width: 100%;}
+	.tab11 {width: 91.66666667%;}
+	.tab10 {width: 83.33333333%;}
+	.tab9 {width: 75%;}
+	.tab8 {width: 66.66666667%;}
+	.tab7 {width: 58.33333333%;}
+	.tab6 {width: 50%;}
+	.tab5 {width: 41.66666667%;}
+	.tab4 {width: 33.33333333%;}
+	.tab3 {width: 25%;}
+	.tab2 {width: 16.66666667%;}
+	.tab1 {width: 8.33333333%;}
+}
+@media (min-width: 992px)
+{
+	.medium1, .medium2, .medium3, .medium4, .medium5, .medium6, .medium7, .medium8, .medium9, .medium10, .medium11, .medium12 {float: left;}.medium12 {width: 100%;}
+	.medium11 {width: 91.66666667%;}
+	.medium10 {width: 83.33333333%;}
+	.medium9 {width: 75%;}
+	.medium8 {width: 66.66666667%;}
+	.medium7 {width: 58.33333333%;}
+	.medium6 {width: 50%;}
+	.medium5 {width: 41.66666667%;}
+	.medium4 {width: 33.33333333%;}
+	.medium3 {width: 25%;}
+	.medium2 {width: 16.66666667%;}
+	.medium1 {width: 8.33333333%;}
+}
+@media (min-width: 1200px)
+{
+	.large1, .large2, .large3, .large4, .large5, .large6, .large7, .large8, .large9, .large10, .large11, .large12
+	{float: left;}
+	.large12 {width: 100%;}
+	.large11 {width: 91.66666667%;}
+	.large10 {width: 83.33333333%;}
+	.large9 {width: 75%;}
+	.large8 {width: 66.66666667%;}
+	.large7 {width: 58.33333333%;}
+	.large6 {width: 50%;}
+	.large5 {width: 41.66666667%;}
+	.large4 {width: 33.33333333%;}
+	.large3 {width: 25%;}
+	.large2 {width: 16.66666667%;}
+	.large1 {width: 8.33333333%;}
+}
